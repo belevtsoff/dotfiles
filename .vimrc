@@ -42,6 +42,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" syntax highlight
+syntax on
+
 " Different settings for GUI and console VIM
 if has('gui_running')
   set guioptions-=T  " no toolbar
@@ -57,5 +60,10 @@ set cc=80
 map <C-PageDown> :bn<CR>
 map <C-PageUp> :bp<CR>
 
+" latex stuff
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_MultipleCompileFormats='dvi,pdf'
+autocmd FileType plaintex,tex,latex syntax spell toplevel
+
 " spell checking
-set spell
+set spelllang=en_gb spell
