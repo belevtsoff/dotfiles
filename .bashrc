@@ -76,15 +76,15 @@ if [[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] ; then
 	alias ls="ls --color=auto"
 	alias dir="dir --color=auto"
 	alias grep="grep --color=auto"
-    alias egrep="egrep --color=auto"
-    alias fgrep="fgrep --color=auto"
+        alias egrep="egrep --color=auto"
+        alias fgrep="fgrep --color=auto"
 	alias dmesg="dmesg --color"
 
-    # some more ls aliases
-    alias ll='ls -alF'
-    alias la='ls -A'
-    alias lh='ls -alFh'
-    alias l='ls -CF'
+        # some more ls aliases
+        alias ll='ls -alF'
+    	alias la='ls -A'
+    	alias lh='ls -alFh'
+    	alias l='ls -CF'
 
 	# Uncomment the "Color" line in /etc/pacman.conf instead of uncommenting the following line...!
 
