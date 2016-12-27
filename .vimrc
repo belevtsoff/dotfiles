@@ -23,6 +23,15 @@ Plugin 'flazz/vim-colorschemes'
 "Plugin 'nvie/vim-flake8.git'
 Plugin 'scrooloose/syntastic'
 
+" Multicursor
+Plugin 'terryma/vim-multiple-cursors'
+
+" Scala stuff
+Plugin 'derekwyatt/vim-scala'
+
+" Latex suite
+Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,9 +51,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" syntax highlight
-syntax on
-
 " Different settings for GUI and console VIM
 if has('gui_running')
   set guioptions-=T  " no toolbar
@@ -60,10 +66,16 @@ set cc=80
 map <C-PageDown> :bn<CR>
 map <C-PageUp> :bp<CR>
 
+" spell checking
+set spell
+
+" compile .tex to pdf by default
+let g:Tex_DefaultTargetFormat="pdf"
+
+" YCM stuff
+let g:ycm_python_binary_path="python"
+
 " latex stuff
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_MultipleCompileFormats='dvi,pdf'
 autocmd FileType plaintex,tex,latex syntax spell toplevel
-
-" spell checking
-set spelllang=en_gb spell
