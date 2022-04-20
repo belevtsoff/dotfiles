@@ -30,7 +30,25 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'derekwyatt/vim-scala'
 
 " Latex suite
-Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
+"Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
+
+" Black
+Plugin 'psf/black'
+
+" SNIPPETS!!!!!
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:ultisnips_python_style="numpy"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -70,12 +88,16 @@ map <C-PageUp> :bp<CR>
 set spell
 
 " compile .tex to pdf by default
-let g:Tex_DefaultTargetFormat="pdf"
+"let g:Tex_DefaultTargetFormat="pdf"
 
 " YCM stuff
 let g:ycm_python_binary_path="python"
 
 " latex stuff
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_MultipleCompileFormats='dvi,pdf'
-autocmd FileType plaintex,tex,latex syntax spell toplevel
+"let g:Tex_DefaultTargetFormat='pdf'
+"let g:Tex_MultipleCompileFormats='dvi,pdf'
+"autocmd FileType plaintex,tex,latex syntax spell toplevel
+
+" black
+let g:black_linelength=80
+map <leader>b :Black<CR>
